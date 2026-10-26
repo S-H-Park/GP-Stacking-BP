@@ -1,0 +1,24 @@
+# Minimal conda environment for gp_stacking_bp.py (versions used for the paper).
+# PyTorch 2.5.1 is the CUDA 12.1 build (torch==2.5.1+cu121) from the PyTorch pip index;
+# it needs an NVIDIA driver that supports CUDA 12.1. GPyTorch and linear_operator are
+# installed with pip so that conda does not pull in a separate CPU-only PyTorch.
+#
+#   conda env create -f environment.yml
+#   conda activate gp-stacking-bp
+name: gp-stacking-bp
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.14
+  - numpy=1.26.4
+  - scipy=1.17.0
+  - scikit-learn=1.8.0
+  - pandas=2.3.3
+  - rdkit=2025.03.6
+  - matplotlib=3.10.8
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - torch==2.5.1+cu121
+      - gpytorch==1.14.3
+      - linear_operator==0.6

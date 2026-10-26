@@ -1,0 +1,12 @@
+# Packages imported by gp_stacking_bp.py, with the exact versions used for the paper
+# (Python 3.11.14). PyTorch is the CUDA 12.1 build from the PyTorch wheel index.
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1+cu121
+gpytorch==1.14.3
+linear_operator==0.6
+numpy==1.26.4
+scipy==1.17.0
+scikit-learn==1.8.0
+pandas==2.3.3
+rdkit==2025.3.6
+matplotlib==3.10.8
